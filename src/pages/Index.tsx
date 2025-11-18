@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
+import MatchingCriteria from "@/components/MatchingCriteria";
+import FAQ from "@/components/FAQ";
+import JoinAsTherapist from "@/components/JoinAsTherapist";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import PsychologistCard from "@/components/PsychologistCard";
 import FilterBar from "@/components/FilterBar";
 
@@ -155,6 +159,12 @@ const Index = () => {
 
       <HowItWorks />
 
+      <MatchingCriteria />
+
+      <FAQ />
+
+      <JoinAsTherapist />
+
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
@@ -171,6 +181,8 @@ const Index = () => {
           </button>
         </div>
       </section>
+
+      <WhatsAppButton />
     </div>
   );
 };
