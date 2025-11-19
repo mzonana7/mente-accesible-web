@@ -66,6 +66,7 @@ const JoinAsTherapist = () => {
               {[
                 "Cédula profesional vigente",
                 "Título de Licenciatura en Psicología",
+                "Título de Maestría en Psicología o áreas afines",
                 "Experiencia mínima de 1 año",
                 "Compromiso con la ética profesional",
                 "Disponibilidad para sesiones en línea",
