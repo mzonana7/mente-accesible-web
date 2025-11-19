@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            Encuentra tu Psicólogo Ideal
+            ¿Quieres tomar terapia, y no sabes por dónde empezar? En tu espacio seguro te ayudamos a encontrar a tu psicólogo ideal.
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150">
             Terapia accesible desde <span className="font-bold">$300 pesos</span> por sesión
