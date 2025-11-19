@@ -1,10 +1,10 @@
-import { Search, Calendar, Video } from "lucide-react";
+import { MessageSquare, Calendar, Video } from "lucide-react";
 
 const steps = [
   {
-    icon: Search,
-    title: "Explora Profesionales",
-    description: "Busca y filtra psicólogos según tu necesidad y presupuesto"
+    icon: MessageSquare,
+    title: "Cuéntanos tu Problemática",
+    description: "Comparte tu situación y necesidades para encontrar el apoyo ideal"
   },
   {
     icon: Calendar,
