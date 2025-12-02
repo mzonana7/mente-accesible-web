@@ -5,7 +5,6 @@ import FAQ from "@/components/FAQ";
 import JoinAsTherapist from "@/components/JoinAsTherapist";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import NeedsForm from "@/components/NeedsForm";
-import PsychologistsSection from "@/components/PsychologistsSection";
 
 const Index = () => {
 
@@ -14,8 +13,6 @@ const Index = () => {
       <Hero />
       
       <NeedsForm />
-
-      <PsychologistsSection />
 
       <HowItWorks />
 
