@@ -84,8 +84,15 @@ const JoinAsTherapist = () => {
             <Button 
               size="lg"
               className="bg-background text-primary hover:bg-background/90 shadow-lg text-lg px-8 py-6 transition-smooth"
+              asChild
             >
-              Únete como Terapeuta
+              <a 
+                href="https://docs.google.com/forms/d/1R1lQCz_jIaFbxqfnLVDu8bm_LOx0VDgNi1ssTDtLLJM/viewform" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Únete como Terapeuta
+              </a>
             </Button>
             <p className="text-primary-foreground/70 mt-4 text-sm">
               Te contactaremos en menos de 48 horas
