@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -19,14 +18,6 @@ const Hero = () => {
             Comienza tu camino hacia el bienestar mental hoy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
-            <Button 
-              size="lg" 
-              className="bg-background text-primary hover:bg-background/90 shadow-lg text-lg px-8 py-6 transition-smooth"
-              onClick={() => document.getElementById('psychologists')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <Search className="mr-2 h-5 w-5" />
-              Buscar Psicólogo
-            </Button>
             <Button 
               size="lg" 
               variant="default"
