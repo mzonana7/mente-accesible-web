@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 import HowItWorks from "@/components/HowItWorks";
 import MatchingCriteria from "@/components/MatchingCriteria";
 import FAQ from "@/components/FAQ";
@@ -10,6 +11,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <Hero />
       
       <NeedsForm />
