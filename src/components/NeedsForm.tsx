@@ -53,7 +53,7 @@ const NeedsForm = () => {
           </p>
         </div>
 
-        <form netlify className="bg-card shadow-xl rounded-2xl p-8 space-y-6">
+        <form className="bg-card shadow-xl rounded-2xl p-8 space-y-6" netlify>
           <div className="space-y-2">
             <Label htmlFor="name" className="flex items-center gap-2">
               <User className="w-4 h-4" />
