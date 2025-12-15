@@ -41,7 +41,6 @@ const Index = () => {
         </div>
       </section>
 
-      <WhatsAppButton />
     </div>
   );
 };
