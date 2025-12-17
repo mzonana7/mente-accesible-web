@@ -32,16 +32,16 @@ const NeedsForm = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Encode form data for Netlify
-      const formData = new FormData();
-      formData.append("form-name", "contact");
-      Object.keys(data).forEach((key) => {
-        formData.append(key, data[key as keyof FormData]);
-      });
+      // Encode form data for Netlify (URL-encoded)
+      const formBody = new URLSearchParams({
+        "form-name": "contact",
+        ...data
+      }).toString();
 
       const response = await fetch("/", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody,
       });
 
       if (!response.ok) {
