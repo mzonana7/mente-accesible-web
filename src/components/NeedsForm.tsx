@@ -32,7 +32,7 @@ const NeedsForm = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Encode form data for Netlify
+      // Encode form data for Netlify Test
       const formData = new FormData();
       formData.append("form-name", "contact");
       Object.keys(data).forEach((key) => {
