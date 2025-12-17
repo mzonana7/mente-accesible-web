@@ -32,10 +32,26 @@ const NeedsForm = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      console.log("Form data:", data);
+      // Encode form data for Netlify
+      const formData = new FormData();
+      formData.append("form-name", "contact");
+      Object.keys(data).forEach((key) => {
+        formData.append(key, data[key as keyof FormData]);
+      });
+
+      const response = await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
       toast.success("¡Gracias! Hemos recibido tu información y pronto nos pondremos en contacto contigo.");
       reset();
     } catch (error) {
+      console.error("Form submission error:", error);
       toast.error("Hubo un error al enviar el formulario. Por favor, intenta de nuevo.");
     }
   };
@@ -53,7 +69,14 @@ const NeedsForm = () => {
           </p>
         </div>
 
-          <form className="bg-card shadow-xl rounded-2xl p-8 space-y-6" name="contact" netlify>
+        <form
+          className="bg-card shadow-xl rounded-2xl p-8 space-y-6"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="space-y-2">
             <Label htmlFor="name" className="flex items-center gap-2">
               <User className="w-4 h-4" />
@@ -123,6 +146,8 @@ const NeedsForm = () => {
                 <SelectItem value="otro">Otro</SelectItem>
               </SelectContent>
             </Select>
+            {/* Hidden input for Netlify form detection */}
+            <input type="hidden" {...register("helpType")} />
             {errors.helpType && (
               <p className="text-sm text-destructive">{errors.helpType.message}</p>
             )}
@@ -156,7 +181,7 @@ const NeedsForm = () => {
           <p className="text-sm text-muted-foreground text-center">
             Tu información está segura y será tratada de forma confidencial
           </p>
-        <|>
+        </form>
       </div>
     </section>
   );
